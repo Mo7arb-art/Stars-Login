@@ -786,31 +786,67 @@ input {
   position: relative;
 }
 
-/* 📱 Mobile Performance Fixes */
+/* 📱 Mobile Optimization */
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
 
-  /* Reduce blur for smoother performance */
+  /* Reduce blur & box sizes */
   .glow,
   .white,
   .border,
   .darkBorderBg {
-    filter: blur(5px) !important;
+    filter: blur(2px) !important; /* less blur = smoother */
+    max-width: 220px;
+    max-height: 80px;
   }
 
-  /* Slow down or remove rotating circles if too heavy */
+  /* Inputs scale */
+  .input {
+    width: 200px;
+    font-size: 16px;
+    padding-inline: 40px;
+  }
+
+  /* Buttons scale */
+  .btn {
+    width: 7rem;
+    height: 2.5rem;
+  }
+
+  /* Background stars performance */
+  #stars,
+  #stars::before,
+  #stars::after {
+    background-size: 80px 80px; /* bigger grid = fewer dots */
+    opacity: 0.6;
+  }
+
+  /* Circles slower = smoother */
   .circle {
-    animation-duration: 20s !important; /* was faster before */
+    animation-duration: 8s !important;
+    filter: blur(1rem);
+  }
+
+  /* Spin & glow reduce size */
+  .white::before,
+  .border::before,
+  .darkBorderBg::before,
+  .glow:before {
+    width: 350px !important;
+    height: 350px !important;
+  }
+
+  /* Section wrapper shrinks */
+  .section-wrapper {
+    width: 90%;
+    top: 45%;
   }
 }
 
-@media (max-width: 768px) {
-  .container {
-    max-width: 95%;
-    padding: 10px;
-  }
-
-  .grid, .poda {
-    width: 100% !important; /* full width on mobile */
-    height: auto;
-  }
+/* ⚡ Performance hint for animations */
+.glow, .white, .border, .darkBorderBg, .circle, #stars {
+  will-change: transform, opacity, background-position;
 }
+
