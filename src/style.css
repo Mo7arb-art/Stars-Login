@@ -1,3 +1,11 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* Prevents sideways scrolling */
+}
+
 /* === Layout & Background === */
 body {
   margin: 0;
@@ -19,6 +27,8 @@ More comprehensive version at shenanigans.shoghisimon.ca/collection/css
  */
 
 .container2 {
+   max-width: 90%;   /* instead of fixed width */
+  margin: 0 auto;   /* center it */
   position: absolute;
   inset: 0;
 }
@@ -775,6 +785,7 @@ input {
 #main {
   position: relative;
 }
+
 /* 📱 Mobile Performance Fixes */
 @media (max-width: 768px) {
 
@@ -792,4 +803,14 @@ input {
   }
 }
 
+@media (max-width: 768px) {
+  .container {
+    max-width: 95%;
+    padding: 10px;
+  }
 
+  .grid, .poda {
+    width: 100% !important; /* full width on mobile */
+    height: auto;
+  }
+}
