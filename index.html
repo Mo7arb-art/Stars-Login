@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guest Login & Register</title>
+  <link rel="stylesheet" href="src/style.css" />
+  <script defer src="src/index.js"></script>
+</head>
+<body>
+<div class="container2">
+  
+  <div class="section-wrapper">
+  <div class="container">
+    <h2>Welcome Guest</h2>
+
+     <!-- Toggle buttons -->
+      <div class="toggle-buttons">
+        <button type="button" class="btn" id="show-register">
+          <strong>Register</strong>
+          <div id="container-stars"><div id="stars"></div></div>
+          <div id="glow"><div class="circle"></div><div class="circle"></div></div>
+        </button>
+
+        <button type="button" class="btn" id="show-login">
+          <strong>Log in</strong>
+          <div id="container-stars"><div id="stars"></div></div>
+          <div id="glow"><div class="circle"></div><div class="circle"></div></div>
+        </button>
+      </div>
+
+      <!-- Form Wrapper -->
+      <div class="form-wrapper">
+        
+        <!-- Register -->
+        <div id="register-section" class="form-section active">
+          <form id="register-form">
+            <div class="poda">
+              <div class="glow"></div>
+              <div class="darkBorderBg"></div>
+              <div class="white"></div>
+              <div class="border"></div>
+              <div class="main">
+                <input placeholder="Username" id="reg-username" type="text" class="input" required />
+                <div class="pink-mask"></div>
+              </div>
+            </div>
+
+            <div class="poda">
+              <div class="glow"></div>
+              <div class="darkBorderBg"></div>
+              <div class="white"></div>
+              <div class="border"></div>
+              <div class="main">
+                <input placeholder="Password" id="reg-password" type="password" class="input" required />
+                <div class="pink-mask"></div>
+              </div>
+            </div>
+
+            <div class="poda">
+              <div class="glow"></div>
+              <div class="darkBorderBg"></div>
+              <div class="white"></div>
+              <div class="border"></div>
+              <div class="main">
+                <input placeholder="Email" id="reg-email" type="email" class="input" required />
+                <div class="pink-mask"></div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn">
+              <strong>Register</strong>
+              <div id="container-stars"><div id="stars"></div></div>
+              <div id="glow"><div class="circle"></div><div class="circle"></div></div>
+            </button>
+          </form>
+        </div>
+
+        <!-- Login -->
+        <div id="login-section" class="form-section">
+          <form id="login-form">
+            <div class="poda">
+              <div class="glow"></div>
+              <div class="darkBorderBg"></div>
+              <div class="white"></div>
+              <div class="border"></div>
+              <div class="main">
+                <input placeholder="Username" id="login-username" type="text" class="input" required />
+                <div class="pink-mask"></div>
+              </div>
+            </div>
+
+            <div class="poda">
+              <div class="glow"></div>
+              <div class="darkBorderBg"></div>
+              <div class="white"></div>
+              <div class="border"></div>
+              <div class="main">
+                <input placeholder="Password" id="login-password" type="password" class="input" required />
+                <div class="pink-mask"></div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn">
+              <strong>Login</strong>
+              <div id="container-stars"><div id="stars"></div></div>
+              <div id="glow"><div class="circle"></div><div class="circle"></div></div>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
