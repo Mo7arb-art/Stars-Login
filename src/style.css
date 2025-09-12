@@ -775,3 +775,21 @@ input {
 #main {
   position: relative;
 }
+/* 📱 Mobile Performance Fixes */
+@media (max-width: 768px) {
+
+  /* Reduce blur for smoother performance */
+  .glow,
+  .white,
+  .border,
+  .darkBorderBg {
+    filter: blur(5px) !important;
+  }
+
+  /* Slow down or remove rotating circles if too heavy */
+  .circle {
+    animation-duration: 20s !important; /* was faster before */
+  }
+}
+
+
