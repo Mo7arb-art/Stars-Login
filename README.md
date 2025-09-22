@@ -4,6 +4,8 @@ Guest Login & Register
 A simple login and registration system built with HTML, CSS, and JavaScript.
 This project allows users to register with a username, email, and password, then log in using those credentials. User data is saved in localStorage for demo purposes.
 
+Live Demo: https://mo7arb-art.github.io/Stars-Login/
+
 ✨ Features
 
 🔐 Register with username, email, and password
